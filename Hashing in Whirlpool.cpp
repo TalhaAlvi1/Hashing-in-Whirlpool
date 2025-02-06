@@ -3,12 +3,11 @@
 #include <iomanip>
 using namespace std;
 
-const int BLOCK_SIZE = 64; // 512 bits
-const int ROUNDS = 10;    // Whirlpool transformation rounds
+const int BLOCK_SIZE = 64;
+const int ROUNDS = 10;
 
 const unsigned char S_BOX[256] = {
     0x18, 0x23, 0xC6, 0xE8, 0x87, 0xB8, 0x01, 0x4F, 0x36, 0xA6, 0xD2, 0xF5, 0x79, 0x6F, 0x91, 0x52,
-    // Fill the rest of the 256 values as per the Whirlpool specification.
 };
 
 void SubBytes(vector<unsigned char>& state) {
@@ -68,7 +67,6 @@ void WhirlpoolHash(const string& input) {
     }
     cout << endl;
 }
-
 int main() {
     string input;
     cout << "Enter input: ";
