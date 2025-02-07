@@ -21,3 +21,8 @@ Hash Computation for Each Block
 3. Finalize the State:
 - After processing all blocks, the resulting state is the Whirlpool hash of the input.
   
+# Explanation
+1. Initialization: The hash function starts by setting an initial 512-bit state.
+2. Input Preprocessing: Input messages are divided into 512-bit blocks, padded as needed to make the total length a multiple of 512 bits.
+3. Transformation: For each block, the Whirlpool transformations (SubBytes, ShiftColumns, MixRows, AddRoundKey) are applied in 10 iterative rounds.
+4. Final Hash: After processing all input blocks, the resulting 512-bit state is the Whirlpool hash value of the input data.
